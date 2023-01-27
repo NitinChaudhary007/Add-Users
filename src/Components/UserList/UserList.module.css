@@ -1,0 +1,20 @@
+.userList {
+    display: flex;
+    justify-content: center;
+}
+
+.userList__box {
+    width: 50%;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.userList__border {
+    border: 1px solid black;
+    margin: 1rem;
+    /* padding: ; */
+}
+
+.userList__border p{
+    margin: 0;
+}
