@@ -11,11 +11,22 @@ const AddUser = (props) => {
   const addUserHandler = (event) => {
     event.preventDefault();
 
-    if(enteredUsername !== "" && enteredAge > 1) {
-        console.log(enteredUsername, enteredAge);
-        setEnteredUsername("");
-        setEnteredAge("");
+    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+      return;
     }
+    if (+enteredAge < 1) {
+      return;
+    }
+
+    const newUser = {
+        key: Math.random(),
+        name: enteredUsername,
+        age: enteredAge
+    };
+    props.onAddUser(newUser);
+    // console.log(enteredUsername, enteredAge);
+    setEnteredUsername("");
+    setEnteredAge("");
   };
 
   const usernameChangeHandler = (event) => {
@@ -25,6 +36,8 @@ const AddUser = (props) => {
   const ageChangeHandler = (event) => {
     setEnteredAge(event.target.value);
   };
+
+
 
   return (
     <Card className={styles.input}>
