@@ -7,12 +7,12 @@ import UsersList from "./Components/Users/UsersList";
 
 const DUMMY_DATA = [
   {
-    key: 0.1251,
+    id: 0.1251,
     name: "Max",
     age: 20,
   },
   {
-    key: 0.1249,
+    id: 0.1249,
     name: "Lucas",
     age: 20,
   },
